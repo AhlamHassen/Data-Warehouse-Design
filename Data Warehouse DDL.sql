@@ -56,3 +56,15 @@ CREATE TABLE RecordType(
     CONSTRAINT PK_DWRecordTypeID PRIMARY KEY (DWRecordTypeID)
 );
 
+
+-- Each row represents details about patient’s records.
+CREATE TABLE PatientRecord(
+    DWPatientRecordID      INT IDENTITY(1,1) NOT NULL,
+    DWPatientID            INT NOT NULL,
+    DWDateID               INT NOT NULL,
+    DWSourceDB             NVARCHAR(50) NOT NULL,
+    Notes                  NVARCHAR(255) NULL,
+    CONSTRAINT PK_DWPatientRecordID PRIMARY KEY (DWPatientRecordID)
+);
+
+
