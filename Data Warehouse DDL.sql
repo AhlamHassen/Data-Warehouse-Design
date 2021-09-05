@@ -33,3 +33,15 @@ CREATE TABLE Patient(
     CONSTRAINT PK_DWPatientID PRIMARY KEY (DWPatientID)
 );
 
+
+-- Stores a patient treatment details such as start date, end date and the staff resposible
+CREATE TABLE Treating(
+    DWTreatingID         INT IDENTITY(1,1) NOT NULL,
+    DWPatientID          INT NOT NULL,
+    DWStaffID            INT NOT NULL,
+    StartDWDateID        INT NOT NULL,
+    EndDWDateID          INT NULL,
+    DWSourceDB           NVARCHAR(50) NOT NULL,
+    CONSTRAINT PK_DWTreatingID PRIMARY KEY (DWTreatingID)
+);
+
