@@ -96,3 +96,9 @@ CREATE TABLE DataPointRecord(
     FrequencySetDate         DATETIME NOT NULL,
     CONSTRAINT PK_DWDataPointRecordID PRIMARY KEY (DWDataPointRecordID)
 );
+
+
+-- Contains detailed date values. 
+CREATE DWDate (
+
+);
