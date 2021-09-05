@@ -68,3 +68,15 @@ CREATE TABLE PatientRecord(
 );
 
 
+-- Stores the default upper and lower limits for each datapoint that can be taken. 
+CREATE TABLE DataPoint(
+    DWDataPointNumber     INT IDENTITY(1,1) NOT NULL,
+    DWSourceDB            NVARCHAR(50) NOT NULL,
+    DataPointNumber       INT NOT NULL,
+    MeasurementName       NVARCHAR(50) NOT NULL,
+    UpperLimit            INT NOT NULL,
+    LowerLimit            INT NOT NULL,
+    [Name]                NVARCHAR(50) NULL,
+    Frequency             INT NOT NULL,
+    CONSTRAINT PK_DWDataPointNumber PRIMARY KEY (DWDataPointNumber)
+);
