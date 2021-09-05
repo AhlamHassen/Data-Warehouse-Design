@@ -80,3 +80,19 @@ CREATE TABLE DataPoint(
     Frequency             INT NOT NULL,
     CONSTRAINT PK_DWDataPointNumber PRIMARY KEY (DWDataPointNumber)
 );
+
+
+-- records patients’ measurements, values, and data points 
+-- along with the frequency and date of the recorded datapoints. 
+CREATE TABLE DataPointRecord(
+    DWDataPointRecordID      INT IDENTITY(1,1) NOT NULL,
+    DWPatientID              INT NOT NULL,
+    DWDataPointNumber        INT NOT NULL,
+    DWDateID                 INT NOT NULL,
+    DWSourceDB               NVARCHAR(50) NOT NULL,
+    TimeRecorded             TIME NOT NULL,
+    [Value]                  FLOAT(10) NOT NULL,
+    Frequency                INT NOT NULL,
+    FrequencySetDate         DATETIME NOT NULL,
+    CONSTRAINT PK_DWDataPointRecordID PRIMARY KEY (DWDataPointRecordID)
+);
