@@ -45,3 +45,14 @@ CREATE TABLE Treating(
     CONSTRAINT PK_DWTreatingID PRIMARY KEY (DWTreatingID)
 );
 
+
+-- Stroes record type and category
+CREATE TABLE RecordType(
+    DWRecordTypeID       INT IDENTITY(1,1) NOT NULL,
+    DWSourceDB           NVARCHAR(50) NOT NULL,
+    RecordTypeID         INT NOT NULL,
+    RecordType           NVARCHAR(50) NOT NULL,
+    Category             NVARCHAR(50) NOT NULL,
+    CONSTRAINT PK_DWRecordTypeID PRIMARY KEY (DWRecordTypeID)
+);
+
